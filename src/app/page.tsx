@@ -58,6 +58,21 @@ export default function Game() {
     ensureScore();
   }, []);
 
+  useEffect(() => {
+    const channel = supabase.channel('realtime scores').on('postgres_changes', {
+      event: 'UPDATE', schema: 'public', table: 'scores'
+    }, (payload) => {
+      setScores(prevScores => ({
+        ...prevScores,
+        [payload.new.team_id]: payload.new.score
+      }))
+    }).subscribe()
+
+    return () => {
+      supabase.removeChannel(channel)
+    }
+  }, [supabase])
+
   const saveScore = async () => {
     try {
       await supabase
