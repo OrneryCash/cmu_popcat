@@ -37,10 +37,10 @@ export default function Login() {
 	};
 
 	return (
-		<div className="flex h-screen w-screen bg-[url('/backgroundLogin.png')] justify-center items-center bg-cover font-['Copse'] pl-[450px] pb-40">
-			<div className="flex flex-col justify-center items-center w-[75%] h-[70%] border-black border-2 rounded-[25px] px-10 py-5 min-w-[500px] max-w-[75%]">
-				<img src={currentLogo} alt="logo" className={`mb-4 h-20`} />
-				<h2 className="mb-4 text-black text-4xl">Log in</h2>
+		<div className="flex h-screen w-screen bg-white lg:bg-[url('/backgroundLogin.png')] justify-center items-center bg-cover font-['Copse'] lg:pl-[400px] xl:pl-[450px] lg:pb-40">
+			<div className="flex flex-col justify-center items-center w-full xl:w-[75%] xl:h-[70%] xl:min-h-[70%] xl:max-h-[70%] border-black border-2 rounded-[25px] px-5 xl:px-10 py-5 xl:min-w-[500px] xl:max-w-[75%] max-w-[90%]">
+				<img src={currentLogo} alt="logo" className={`mb-4 h-12 xl:h-20`} />
+				<h2 className="mb-4 text-black text-2xl lg:text-4xl">Log in</h2>
 				<form
 					onSubmit={handleLogin}
 					className="flex flex-col items-center w-full"
@@ -52,7 +52,7 @@ export default function Login() {
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
 						required
-						className="mb-4 p-4 border border-gray-300 rounded-full w-full text-2xl text-black"
+						className="mb-4 p-4 border border-gray-300 rounded-full w-full text-xl xl:text-2xl text-black"
 					/>
 					<input
 						type="password"
@@ -61,11 +61,11 @@ export default function Login() {
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
 						required
-						className="mb-4 p-4 border border-gray-300 rounded-full w-full text-2xl text-black"
+						className="mb-4 p-4 border border-gray-300 rounded-full w-full text-xl xl:text-2xl text-black"
 					/>
 					<button
 						type="submit"
-						className="p-4 bg-[#D9D9D9] text-black rounded-full w-full m-9 text-3xl"
+						className="p-4 bg-[#D9D9D9] text-black rounded-full w-full m-9 text-2xl xl:text-3xl"
 					>
 						Confirm
 					</button>
