@@ -37,9 +37,13 @@ export default function Login() {
 	};
 
 	return (
-		<div className="flex h-screen w-screen bg-white lg:bg-[url('/backgroundLogin.png')] justify-center items-center bg-cover font-['Copse'] lg:pl-[400px] xl:pl-[450px] lg:pb-40">
-			<div className="flex flex-col justify-center items-center w-full xl:w-[75%] xl:h-[70%] xl:min-h-[70%] xl:max-h-[70%] border-black border-2 rounded-[25px] px-5 xl:px-10 py-5 xl:min-w-[500px] xl:max-w-[75%] max-w-[90%]">
-				<img src={currentLogo} alt="logo" className={`mb-4 h-12 xl:h-20`} />
+		<div className="flex h-screen w-screen bg-white lg:bg-[url('/backgroundLogin.png')] justify-center items-center lg:items-start bg-cover font-['Copse'] lg:pl-[400px] xl:pl-[450px] lg:pt-[5%] box-border">
+			<div className="flex flex-col justify-center items-center w-full xl:w-[75%] border-black border-2 rounded-[25px] px-5 xl:px-10 py-5 xl:min-w-[500px] xl:max-w-[75%] max-w-[90%] box-border">
+				<img
+					src={currentLogo}
+					alt="logo"
+					className={`mb-4 h-12 xl:h-20 box-border`}
+				/>
 				<h2 className="mb-4 text-black text-2xl lg:text-4xl">Log in</h2>
 				<form
 					onSubmit={handleLogin}

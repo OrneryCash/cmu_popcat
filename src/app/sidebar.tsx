@@ -44,7 +44,7 @@ export default function Sidebar({ teams, score }: SidebarProps) {
 						localStorage.clear();
 						window.location.reload();
 					}}
-					className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+					className="text-white font-bold py-2 px-4 rounded border-white border-2"
 				>
 					Log Out
 				</button>
